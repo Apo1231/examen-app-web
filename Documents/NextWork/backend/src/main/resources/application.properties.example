@@ -1,0 +1,36 @@
+# =============================================
+# Server
+# =============================================
+server.port=8080
+
+# =============================================
+# DataSource - Aiven MySQL
+# Solicitar valores reales al lider del proyecto
+# Colocar truststore.jks en src/main/resources/ssl/
+# =============================================
+spring.datasource.url=jdbc:mysql://HOST:PORT/next_work_db?sslMode=VERIFY_CA&trustCertificateKeyStoreUrl=file:${user.dir}/src/main/resources/ssl/truststore.jks&trustCertificateKeyStorePassword=TRUSTSTORE_PASSWORD&trustCertificateKeyStoreType=JKS
+spring.datasource.username=USUARIO
+spring.datasource.password=PASSWORD
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# =============================================
+# JPA / Hibernate
+# =============================================
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+# =============================================
+# JWT
+# jwt.secret debe tener minimo 32 caracteres (256 bits para HS256)
+# jwt.expiration-ms=86400000 equivale a 24 horas
+# =============================================
+jwt.secret=CAMBIA_ESTE_SECRET_POR_UNO_SEGURO_DE_AL_MENOS_32_CHARS
+jwt.expiration-ms=86400000
+
+# =============================================
+# Logging
+# =============================================
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.com.nextwork=INFO

@@ -1,0 +1,17 @@
+{
+  "name": "Backend",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "build": "echo \"build step (configure según tu stack)\"",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}
+

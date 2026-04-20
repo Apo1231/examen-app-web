@@ -1,0 +1,200 @@
+/* NextWork — custom global styles (Bootstrap 5 base) */
+
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  color-scheme: light;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Bootstrap primary color overrides ────────── */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* ── Wireframe utility classes ─────────────────── */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+/* ── NextWork header / logo ─────────────────────── */
+.nextword-header {
+  background-color: white;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nextword-logo {
+  height: 2.35rem;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  display: block;
+  image-rendering: auto;
+}
+
+.nextword-logo-auth {
+  height: 3.6rem;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nextword-logo-header {
+  margin-top: 1px;
+}
+
+.nextword-logo-landing {
+  height: 2.9rem;
+  max-width: 340px;
+}
+
+@media (max-width: 768px) {
+  .nextword-logo {
+    height: 2rem;
+    max-width: 210px;
+  }
+
+  .nextword-logo-auth {
+    height: 3rem;
+    max-width: 300px;
+  }
+
+  .nextword-logo-landing {
+    height: 2.35rem;
+    max-width: 270px;
+  }
+}
+
+/* ── Badge custom colors ───────────────────────── */
+.badge-presencial {
+  background-color: #7c3aed;
+  color: #fff;
+}
+
+.badge-virtual {
+  background-color: #0ea5e9;
+  color: #fff;
+}
+
+/* ── Teacher card ──────────────────────────────── */
+.card-teacher {
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.card-teacher:hover {
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+}
+
+/* ── Avatar initials circle ─────────────────────── */
+.avatar-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.avatar-circle-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.8rem;
+}
+
+.avatar-circle-lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+/* ── Slot selection button ──────────────────────── */
+.btn-slot {
+  min-width: 110px;
+  font-size: 0.85rem;
+}
+
+/* ── QR image ───────────────────────────────────── */
+.qr-img {
+  max-width: 200px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* ── Auth card centered ─────────────────────────── */
+.auth-card {
+  max-width: 440px;
+  width: 100%;
+}
+
+/* ── Table row hover ────────────────────────────── */
+.table-hover tbody tr:hover {
+  background-color: rgba(37, 99, 235, 0.04);
+}
+
+/* ── Badge large ────────────────────────────────── */
+.badge-lg {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Required field marker */
+.form-label:has(+ input[required])::after,
+.form-label:has(+ select[required])::after,
+.form-label:has(+ textarea[required])::after,
+.form-label:has(+ .form-control[required])::after,
+.form-label:has(+ .form-select[required])::after,
+.form-label:has(+ .input-group input[required])::after,
+.form-label:has(+ .input-group textarea[required])::after {
+  content: ' *';
+  color: #dc3545;
+  font-weight: 700;
+}
