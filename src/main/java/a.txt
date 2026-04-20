@@ -1,0 +1,22 @@
+BASE URL: http://localhost:8080
+EQUIPOS
+Buscar disponibles por nombre:
+GET /api/equipos/disponibles?nombre=LAPTOP
+
+PRÉSTAMOS
+Solicitar Préstamo (40 pts):
+POST /api/prestamos/solicitar
+Body:
+JSON
+{
+    "usuarioId": 1,
+    "equipoId": 1
+}
+Aprobar Préstamo (20 pts):
+PUT /api/prestamos/1/aprobar
+
+Registrar Devolución (20 pts):
+PUT /api/prestamos/1/devolver
+
+Rechazar Préstamo (10 pts):
+PUT /api/prestamos/1/rechazar
